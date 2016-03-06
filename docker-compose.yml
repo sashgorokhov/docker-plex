@@ -1,0 +1,10 @@
+version: '2'
+services:
+  plex:
+    image: sashgorokhov/plex
+    volumes:
+      - "/mnt/plex:/usr/sbin/plexmediaserver"
+      - "/mnt/media:/media"
+    ports:
+      - "32400:32400"
+    network_mode: "host"
