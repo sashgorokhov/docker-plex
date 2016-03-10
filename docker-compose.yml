@@ -3,6 +3,7 @@ services:
   plex:
     restart: unless-stopped
     image: sashgorokhov/plex
+    network_mode: "host"
     volumes:
       - "/mnt/plex:/usr/sbin/plexmediaserver"
       - "/mnt/media:/media"
